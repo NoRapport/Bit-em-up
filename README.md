@@ -1,4 +1,4 @@
-# Pocket Bit'Em Up !
+# pocket Bit'Em Up !
 #### Rythm'Beat'em up top down with GameBoy controls and AI graphics impulse*
 
 .
