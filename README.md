@@ -21,4 +21,4 @@ https://assetstore.unity.com/packages/2d/characters/tiny-rpg-forest-114685
 
 __________________ *
 
-*AI graphics impulse = I mean I got chill, spent some times on "NoBoobsJourney", vomit my brain in the prompt and ...Tada ! I've got some idea or sort of brain'clay to start my creative brain ;)
+*AI graphics impulse = I mean I got chill, spent some times on "NoBoobsJourney", vomit my brain in the prompt and ...Tada ! I've got some sort of brain'clay to start my lazy magnific creative brain ;)
