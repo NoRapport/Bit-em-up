@@ -1,5 +1,5 @@
 # Bit'em up !
-#### Rythm'Beat'em up top down with GameBoy controls with AI graphics impulse
+#### Rythm'Beat'em up top down with GameBoy controls and AI graphics impulse
 
 .
 
