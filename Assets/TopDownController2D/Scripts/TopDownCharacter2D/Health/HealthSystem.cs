@@ -29,6 +29,8 @@ namespace TopDownCharacter2D.Health
 
         public float MaxHealth => _statsHandler.CurrentStats.maxHealth;
 
+        public bool isDead = false;
+
         private void Awake()
         {
             _statsHandler = GetComponent<CharacterStatsHandler>();
@@ -79,7 +81,9 @@ namespace TopDownCharacter2D.Health
 
             if (CurrentHealth <= 0f)
             {
+              if (!isDead) {
                 Death();
+              }
             }
 
             return true;
@@ -87,6 +91,7 @@ namespace TopDownCharacter2D.Health
 
         private void Death()
         {
+            isDead = true;
             onDeath.Invoke();
         }
     }
