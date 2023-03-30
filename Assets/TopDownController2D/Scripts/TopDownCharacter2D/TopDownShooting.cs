@@ -46,6 +46,7 @@ namespace TopDownCharacter2D
         /// <param name="newAimDirection"> The new aim direction </param>
         public void OnAim(Vector2 newAimDirection)
         {
+            //Debug.Log("OnAim");
             _aimDirection = newAimDirection;
         }
 
@@ -55,6 +56,7 @@ namespace TopDownCharacter2D
         /// <param name="attackConfig"> The stats of the projectile to shoot </param>
         public void OnShoot(AttackConfig attackConfig)
         {
+            Debug.Log("OnShoot");
             RangedAttackConfig rangedAttackConfig = (RangedAttackConfig) attackConfig;
             float projectilesAngleSpace = rangedAttackConfig.multipleProjectilesAngle;
             float minAngle = -(rangedAttackConfig.numberOfProjectilesPerShot / 2f) * projectilesAngleSpace +
@@ -81,6 +83,7 @@ namespace TopDownCharacter2D
         /// <param name="angle"> Modification to the direction of the shot</param>
         private void CreateProjectile(RangedAttackConfig rangedAttackConfig, float angle)
         {
+            Debug.Log("CreateProjectile");
             projectileManager.ShootBullet(projectileSpawnPosition.position, RotateVector2(_aimDirection.normalized, angle),
                 rangedAttackConfig);
         }
