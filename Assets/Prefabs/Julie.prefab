@@ -298,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1766844560292611532
 Transform:
   m_ObjectHideFlags: 0
@@ -600,6 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetList: []
   targetLocked: {fileID: 0}
+  weapon: {fileID: 1766844560292611533}
 --- !u!114 &1766844560934434727
 MonoBehaviour:
   m_ObjectHideFlags: 0

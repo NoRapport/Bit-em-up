@@ -14,6 +14,9 @@ namespace TopDownCharacter2D.Controllers
         public GameObject targetLocked;
     //
 
+        public GameObject weapon;
+
+
 //        private Camera _camera;
 //
 //        protected override void Awake()
@@ -29,8 +32,11 @@ namespace TopDownCharacter2D.Controllers
             targetLocked = TargetLocked();
 
             if (targetList.Length != 0) {
+              weapon.SetActive(true);
               Vector2 newAim = targetLocked.transform.position - transform.position;
               LookEvent.Invoke(newAim);
+            } else if (targetList.Length == 0){
+              weapon.SetActive(false);
             }
         }
 
@@ -91,7 +97,9 @@ namespace TopDownCharacter2D.Controllers
         /// <param name="value"> The value of the input </param>
         public void OnFire(InputValue value)
         {
+          if (targetList.Length != 0) {
             IsAttacking = value.isPressed;
+          }
         }
 
         #endregion
