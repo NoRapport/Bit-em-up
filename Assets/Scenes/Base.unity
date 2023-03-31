@@ -719,6 +719,7 @@ GameObject:
   - component: {fileID: 366398202}
   - component: {fileID: 366398204}
   - component: {fileID: 366398203}
+  - component: {fileID: 366398205}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -771,6 +772,19 @@ MonoBehaviour:
   minionSpawnersList: []
   minionSpawner: {fileID: 0}
   slimeGhostPrefab: {fileID: 4279346622097010058, guid: 696fbe9b6657dda0c87dc70d36f32957, type: 3}
+--- !u!114 &366398205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366398201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e288756a3166a78967764ee78a0bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1566486155}
 --- !u!1 &376593910
 GameObject:
   m_ObjectHideFlags: 0
@@ -9877,7 +9891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1566486156
 RectTransform:
   m_ObjectHideFlags: 0

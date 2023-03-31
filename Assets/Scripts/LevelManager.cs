@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour
     public int level = 0;
     public Text levelText;
 
+    public GameObject[] targetList;
+
     public static LevelManager instance;
 
     void Awake()
@@ -41,6 +43,13 @@ public class LevelManager : MonoBehaviour
       }
 
       levelText.text = level.ToString();
+
+      targetList = GameObject.FindGameObjectsWithTag("Target");
+
+      if (targetList.Length == 0) {
+        AutoSpawn();
+      }
+
     }
 
     public void LaunchLevelSequence()
@@ -48,5 +57,11 @@ public class LevelManager : MonoBehaviour
       SpawnMinion.instance.minionSpawners = GameObject.FindGameObjectsWithTag("MinionSpawner");
       SpawnMinion.instance.minionSpawnersList = new List<GameObject>(SpawnMinion.instance.minionSpawners);
       StartCoroutine(SpawnMinion.instance.MinionWave("slimeGhost", level, 3));
+    }
+
+    public void AutoSpawn()
+    {
+      level+=1;
+      LaunchLevelSequence();
     }
 }
