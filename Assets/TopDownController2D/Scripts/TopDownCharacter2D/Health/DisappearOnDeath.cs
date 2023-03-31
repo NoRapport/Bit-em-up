@@ -27,9 +27,7 @@ namespace TopDownCharacter2D.Health
         public IEnumerator WaitAndDie()
         {
           // We wait before destroying the object in order to properly end all the related effects
-          Debug.Log("start waiting");
           yield return new WaitForSeconds(0.8f);
-          Debug.Log("end waiting");
 
           foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
           {

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Target
   - MinionSpawner
+  - Traget
+  - HealthBar
   layers:
   - Default
   - TransparentFX

@@ -30,6 +30,7 @@ namespace TopDownCharacter2D.Health
         public float MaxHealth => _statsHandler.CurrentStats.maxHealth;
 
         public bool isDead = false;
+        public HealthBar healthBar;
 
         private void Awake()
         {
@@ -39,6 +40,12 @@ namespace TopDownCharacter2D.Health
         private void Start()
         {
             CurrentHealth = _statsHandler.CurrentStats.maxHealth;
+
+          // Set HealthBar
+            if (healthBar) {
+              healthBar.SetMaxHealth(CurrentHealth);
+            }
+          //
         }
 
         private void Update()
@@ -69,6 +76,12 @@ namespace TopDownCharacter2D.Health
             CurrentHealth += change;
             CurrentHealth = CurrentHealth > MaxHealth ? MaxHealth : CurrentHealth;
             CurrentHealth = CurrentHealth < 0 ? 0 : CurrentHealth;
+
+        // Change HealthBar
+            if (healthBar) {
+              healthBar.SetHealth(CurrentHealth);
+            }
+        //
 
             if (change > 0)
             {

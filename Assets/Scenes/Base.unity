@@ -860,6 +860,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 320267439}
     m_Modifications:
+    - target: {fileID: 183438482843630712, guid: 696fbe9b6657dda0c87dc70d36f32957, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833317723167248228, guid: 696fbe9b6657dda0c87dc70d36f32957, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4279346622097010058, guid: 696fbe9b6657dda0c87dc70d36f32957, type: 3}
       propertyPath: m_Name
       value: SlimeScale
@@ -906,6 +914,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4279346622097010059, guid: 696fbe9b6657dda0c87dc70d36f32957, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679900240060980229, guid: 696fbe9b6657dda0c87dc70d36f32957, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6955035859854153718, guid: 696fbe9b6657dda0c87dc70d36f32957, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6955035859854153718, guid: 696fbe9b6657dda0c87dc70d36f32957, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501676459922679248, guid: 696fbe9b6657dda0c87dc70d36f32957, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
