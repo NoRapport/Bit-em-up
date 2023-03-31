@@ -12,6 +12,7 @@ namespace TopDownCharacter2D.Controllers
     // Auto lock objects
         public GameObject[] targetList;
         public GameObject targetLocked;
+        public GameObject targetLastLocked;
     //
 
         public GameObject weapon;
@@ -32,9 +33,20 @@ namespace TopDownCharacter2D.Controllers
             targetLocked = TargetLocked();
 
             if (targetList.Length != 0) {
+
               weapon.SetActive(true);
+
+                if (targetLastLocked != targetLocked) {
+                  if (targetLastLocked != null) {
+                      targetLastLocked.transform.GetChild(0).gameObject.SetActive(false);
+                  }
+                  targetLocked.transform.GetChild(0).gameObject.SetActive(true);
+                  targetLastLocked = targetLocked;
+                }
+
               Vector2 newAim = targetLocked.transform.position - transform.position;
               LookEvent.Invoke(newAim);
+
             } else if (targetList.Length == 0){
               weapon.SetActive(false);
             }
