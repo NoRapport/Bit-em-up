@@ -92,7 +92,6 @@ namespace TopDownCharacter2D.Controllers
         public void OnFire(InputValue value)
         {
             IsAttacking = value.isPressed;
-            Debug.Log(IsAttacking);
         }
 
         #endregion

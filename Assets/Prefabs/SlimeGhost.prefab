@@ -234,6 +234,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 977709029691615454}
   rb: {fileID: 977709029691615393}
+  col: {fileID: 977709029691615453}
+  col2: {fileID: 977709029691615399}
 --- !u!114 &977709029691615455
 MonoBehaviour:
   m_ObjectHideFlags: 0

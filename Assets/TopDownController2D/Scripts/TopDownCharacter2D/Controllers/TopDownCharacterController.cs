@@ -45,7 +45,6 @@ namespace TopDownCharacter2D.Controllers
             {
                 _timeSinceLastAttack = 0f;
                 onAttackEvent.Invoke(Stats.CurrentStats.attackConfig);
-                Debug.Log("onAttackEvent Invoke");
             }
         }
 

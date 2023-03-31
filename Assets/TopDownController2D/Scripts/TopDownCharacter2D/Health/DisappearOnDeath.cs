@@ -12,11 +12,15 @@ namespace TopDownCharacter2D.Health
     {
         public Animator animator;
         public Rigidbody2D rb;
+        public Collider2D col;
+        public Collider2D col2;
 
         public void OnDeath()
         {
             animator.SetTrigger("Death");
-            rb.bodyType = RigidbodyType2D.Static;
+            //rb.bodyType = RigidbodyType2D.Static;
+            col.enabled = false;
+            col2.enabled = false;
             StartCoroutine(WaitAndDie());
         }
 
