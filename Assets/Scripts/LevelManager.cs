@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
     {
       if(Input.GetKeyDown(KeyCode.L))
       {
-        level+=5;
+        level+=1;
         Debug.Log(level);
       }
 

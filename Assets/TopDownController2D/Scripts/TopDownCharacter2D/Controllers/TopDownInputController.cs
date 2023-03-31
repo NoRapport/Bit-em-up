@@ -111,6 +111,8 @@ namespace TopDownCharacter2D.Controllers
         {
           if (targetList.Length != 0) {
             IsAttacking = value.isPressed;
+          } else {
+            IsAttacking = false;
           }
         }
 

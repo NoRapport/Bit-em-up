@@ -60,7 +60,7 @@ public class SpawnMinion : MonoBehaviour
     //Minion Sequence
     public IEnumerator MinionWave(string minionType, int numberOfMinions, float spawnBreak)
     {
-        for (int i = 0; i < numberOfMinions; i++) {
+        for (int i = 0; i < numberOfMinions*5; i++) {
           MinionSpawnByName(minionType);
           yield return new WaitForSeconds(spawnBreak * 0.1f);
         }
