@@ -10,8 +10,8 @@ namespace TopDownCharacter2D
     [RequireComponent(typeof(TopDownCharacterController))]
     public class TopDownAimRotation : MonoBehaviour
     {
-        [SerializeField] [Tooltip("The renderer of the arm used to aim")]
-        private SpriteRenderer armRenderer;
+        //[SerializeField] [Tooltip("The renderer of the arm used to aim")]
+        //private SpriteRenderer armRenderer;
 
         [SerializeField] [Tooltip("The main renderer of the character")]
         private List<SpriteRenderer> characterRenderers;
@@ -48,7 +48,7 @@ namespace TopDownCharacter2D
         {
             float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            armRenderer.flipY = Mathf.Abs(rotZ) > 90f;
+            //armRenderer.flipY = Mathf.Abs(rotZ) > 90f;
             //foreach (SpriteRenderer charRenderer in characterRenderers)
             //{
             //    charRenderer.flipX = armRenderer.flipY;

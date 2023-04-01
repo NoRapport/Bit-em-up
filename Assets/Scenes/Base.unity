@@ -1307,7 +1307,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.23137255, g: 0.28627452, b: 0.07450981, a: 1}
+  m_BackGroundColor: {r: 0.08627451, g: 0.09411765, b: 0.09019608, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1572,7 +1572,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 704882922}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &626654654
 SpriteRenderer:
@@ -1615,7 +1615,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 034ef6c58acccec9ea874aac10066a52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3fb9ccf3cb66ae1c192acab46ca14726, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -23975,9 +23975,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1908762240}
   - {fileID: 626654653}
   - {fileID: 1380226795}
+  - {fileID: 1908762240}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29894,7 +29894,7 @@ Transform:
   - {fileID: 340944850}
   - {fileID: 2104639280}
   m_Father: {fileID: 704882922}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1402324742
 GameObject:
@@ -33268,7 +33268,7 @@ Transform:
   - {fileID: 700812863}
   - {fileID: 2059838573}
   m_Father: {fileID: 704882922}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1910994088
 GameObject:
