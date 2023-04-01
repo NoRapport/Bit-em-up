@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public int level = 0;
     public Text levelText;
+    public Animator lvlAnimator;
 
     public GameObject[] targetList;
 
@@ -62,6 +63,7 @@ public class LevelManager : MonoBehaviour
     public void AutoSpawn()
     {
       level+=1;
+      lvlAnimator.SetTrigger("LvLUp");
       LaunchLevelSequence();
     }
 }
