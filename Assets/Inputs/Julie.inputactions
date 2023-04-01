@@ -1,5 +1,5 @@
 {
-    "name": "Top Down Controller 2D",
+    "name": "Julie",
     "maps": [
         {
             "name": "Player",
@@ -142,17 +142,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "46949ece-846f-4eb2-8b9d-8137b7d2a87d",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
