@@ -18,6 +18,7 @@ namespace TopDownCharacter2D.Health
         public void OnDeath()
         {
             animator.SetTrigger("Death");
+            gameObject.tag = "Dead";
             //rb.bodyType = RigidbodyType2D.Static;
             col.enabled = false;
             col2.enabled = false;
