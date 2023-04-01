@@ -1399,7 +1399,7 @@ GameObject:
   - component: {fileID: 626654653}
   - component: {fileID: 626654654}
   m_Layer: 7
-  m_Name: Raclette.Ninja_top_down_tilemap_32-bit_pixel_art_style_of_Hyper_64a34407-954b-474d-a514-c7b1a349a019
+  m_Name: Tableaux
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1461,7 +1461,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1f8f41b5416eb791493be45cb08141da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 034ef6c58acccec9ea874aac10066a52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
