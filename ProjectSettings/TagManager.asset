@@ -9,6 +9,7 @@ TagManager:
   - Traget
   - HealthBar
   - GBAarrow
+  - Dead
   layers:
   - Default
   - TransparentFX
