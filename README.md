@@ -6,6 +6,10 @@
 ![alt text](https://github.com/NoRapport/Bit-em-up/blob/main/Title.png)
 
 
+Controls : Move(Arrows/ZQSD) Shoot(Space) Pause(Escape)
+
+-
+
 Powered by Unity 2D Engine (v2021.3.21f1)
 
 and
