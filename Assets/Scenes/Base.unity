@@ -1552,6 +1552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626654653}
   - component: {fileID: 626654654}
+  - component: {fileID: 626654655}
   m_Layer: 7
   m_Name: Tableaux
   m_TagString: Untagged
@@ -1626,6 +1627,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &626654655
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626654652}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da9f00e359756bd449cfe9c225686a1e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &635481716
 GameObject:
   m_ObjectHideFlags: 0
@@ -57905,11 +57927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251457984729655835, guid: 7489768188f01a7409e3f2bd2e6b4d56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.51
+      value: 10.7
       objectReference: {fileID: 0}
     - target: {fileID: 6251457984729655835, guid: 7489768188f01a7409e3f2bd2e6b4d56, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.7
+      value: 27.9
       objectReference: {fileID: 0}
     - target: {fileID: 6251457984729655835, guid: 7489768188f01a7409e3f2bd2e6b4d56, type: 3}
       propertyPath: m_LocalPosition.z
