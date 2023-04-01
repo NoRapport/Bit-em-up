@@ -9,7 +9,7 @@ public class DieToQuit : MonoBehaviour
 
     void Update()
     {
-      if (playerLife.value <= 0) {
+      if (playerLife.value <= 0 && Time.time >= 1) {
         Application.Quit();
       }
     }
