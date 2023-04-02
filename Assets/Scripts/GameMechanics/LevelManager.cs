@@ -35,7 +35,6 @@ public class LevelManager : MonoBehaviour
       if(Input.GetKeyDown(KeyCode.L))
       {
         level+=1;
-        Debug.Log(level);
       }
 
       if(Input.GetKeyDown(KeyCode.M))
