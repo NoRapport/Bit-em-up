@@ -24428,7 +24428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1766844560934434717, guid: 8423a12a49559c97888ba0362cd2530d, type: 3}
       propertyPath: recoilStrength
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1766844560934434720, guid: 8423a12a49559c97888ba0362cd2530d, type: 3}
       propertyPath: m_Enabled
