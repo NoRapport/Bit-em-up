@@ -15,6 +15,9 @@ namespace TopDownCharacter2D.Health
         public Collider2D col;
         public Collider2D col2;
 
+        public GameObject lifeUpPrefab;
+        public GameObject powerUpPrefab;
+
         public void OnDeath()
         {
             animator.SetTrigger("Death");
@@ -27,6 +30,7 @@ namespace TopDownCharacter2D.Health
 
         public IEnumerator WaitAndDie()
         {
+          RandomDrop();
           // We wait before destroying the object in order to properly end all the related effects
           yield return new WaitForSeconds(0.8f);
 
@@ -47,6 +51,19 @@ namespace TopDownCharacter2D.Health
           }
 
           Destroy(gameObject);
+        }
+
+        public void RandomDrop()
+        {
+          float dice = Random.Range(0, 20);
+          Debug.Log("Dice is " + dice);
+
+          if (dice >= 16 && dice <= 19) {
+            GameObject drop = Instantiate(lifeUpPrefab, transform.position, Quaternion.identity);
+          } else if (dice == 20) {
+            GameObject drop = Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
+          }
+
         }
     }
 }
