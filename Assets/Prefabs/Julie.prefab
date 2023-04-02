@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766844559632480842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 0.008, z: 0}
+  m_LocalPosition: {x: 1.1, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ae9f83edb74d3d854cf6668f8de1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoilStrength: 0.05
+  recoilStrength: 0
   projectileSizeModifyRecoil: 1
   projectileSpawnPosition: {fileID: 1766844559632480837}
 --- !u!114 &1766844560934434716

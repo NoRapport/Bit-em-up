@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aca20c846ab409baaeb6c4782674e6c, type: 3}
   m_Name: PowerUpRangedAttack
   m_EditorClassIdentifier: 
-  size: 0
+  size: 0.25
   delay: -0.025
   power: 0
   speed: 0
@@ -21,6 +21,6 @@ MonoBehaviour:
     m_Bits: 0
   duration: 0
   spread: 0
-  numberOfProjectilesPerShot: 1
+  numberOfProjectilesPerShot: 0
   multipleProjectilesAngle: 0
   projectileColor: {r: 0, g: 0, b: 0, a: 0}

@@ -240,6 +240,7 @@ MonoBehaviour:
   col: {fileID: 977709029691615453}
   col2: {fileID: 977709029691615399}
   lifeUpPrefab: {fileID: 6826026108902570168, guid: 9eee96011b5868c459f1a95d3fce462c, type: 3}
+  powerUpPrefab: {fileID: 6879562193199501583, guid: 47020197b815a1b47a070bbf924f0ce6, type: 3}
 --- !u!114 &977709029691615455
 MonoBehaviour:
   m_ObjectHideFlags: 0

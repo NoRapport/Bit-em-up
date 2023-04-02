@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aca20c846ab409baaeb6c4782674e6c, type: 3}
   m_Name: PlayerShootConfig
   m_EditorClassIdentifier: 
-  size: 0.6
+  size: 1
   delay: 0.15
   power: 1
   speed: 15

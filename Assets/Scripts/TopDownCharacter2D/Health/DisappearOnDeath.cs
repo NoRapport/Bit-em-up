@@ -58,9 +58,9 @@ namespace TopDownCharacter2D.Health
           float dice = Random.Range(0, 20);
           Debug.Log("Dice is " + dice);
 
-          if (dice >= 16 && dice <= 19) {
+          if (dice >= 15 && dice <= 18) {
             GameObject drop = Instantiate(lifeUpPrefab, transform.position, Quaternion.identity);
-          } else if (dice == 20) {
+          } else if (dice >= 19) {
             GameObject drop = Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
           }
 
