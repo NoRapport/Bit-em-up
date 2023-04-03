@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -335,6 +335,8 @@ MonoBehaviour:
   onInvincibilityEnd:
     m_PersistentCalls:
       m_Calls: []
+  isDead: 0
+  healthBar: {fileID: 0}
 --- !u!114 &977709029691615449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +349,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2da6d6552ece34d8a2c92a38459158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  rb: {fileID: 0}
+  col: {fileID: 0}
+  col2: {fileID: 0}
+  lifeUpPrefab: {fileID: 0}
+  powerUpPrefab: {fileID: 0}
 --- !u!114 &977709029691615455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5236,7 +5244,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -5340,7 +5348,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
