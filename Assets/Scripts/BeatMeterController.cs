@@ -16,6 +16,7 @@ public class BeatMeterController : MonoBehaviour
 
     [Header("BPM")]
     [SerializeField] int bpm = 120;
+    [SerializeField] bool leftToRight = false;
     [SerializeField] public Beat state = Beat.OffBeat;
 
     [Header("Sprites")]
@@ -97,14 +98,20 @@ public class BeatMeterController : MonoBehaviour
         }
         else if (state == Beat.AlmostOnBeat)
         {
-            bars[currentBeatTime < 0 ? 1 : 3].color = debug ? debugColor : onBeatColor;
+            if (leftToRight)
+                bars[currentBeatTime < 0 ? 1 : 3].color = debug ? debugColor : onBeatColor;
+            else
+                bars[currentBeatTime > 0 ? 1 : 3].color = debug ? debugColor : onBeatColor;
 
             // reset the audio clip debug
             clipPlayed = false;
         }
         else if (state == Beat.AlmostOffBeat)
         {
-            bars[currentBeatTime < 0 ? 0 : 4].color = debug ? debugColor : onBeatColor;
+            if (leftToRight)
+                bars[currentBeatTime < 0 ? 0 : 4].color = debug ? debugColor : onBeatColor;
+            else
+                bars[currentBeatTime > 0 ? 0 : 4].color = debug ? debugColor : onBeatColor;
         }
     }
 }
