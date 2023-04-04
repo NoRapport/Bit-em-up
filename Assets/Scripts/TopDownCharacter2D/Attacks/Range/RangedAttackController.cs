@@ -53,6 +53,10 @@ namespace TopDownCharacter2D.Attacks.Range
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+          if (other.CompareTag("Bullet")) {}
+          else if (other.CompareTag("Player")) {}
+          else {
+
             if (levelCollisionLayer.value == (levelCollisionLayer.value | (1 << other.gameObject.layer)))
             {
                 if (DestroyOnHit)
@@ -78,6 +82,7 @@ namespace TopDownCharacter2D.Attacks.Range
                     DestroyProjectile(other.ClosestPoint(transform.position), fxOnDestroy);
                 }
             }
+          }
         }
 
         /// <summary>
