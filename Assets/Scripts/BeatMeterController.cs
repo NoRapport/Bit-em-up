@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,13 +19,14 @@ public class BeatMeterController : MonoBehaviour
     [SerializeField] public Beat state = Beat.OffBeat;
 
     [Header("Sprites")]
-    [SerializeField] Image mainBar;
-    [SerializeField] Image[] secondBars = new Image[2];
-    [SerializeField] Image[] thirdBars = new Image[2];
+    [SerializeField] Image[] bars = new Image[5];
+    [SerializeField] Color onBeatColor = new Color(1.0f, 1.0f, 1.0f, 0.5f);
+    [SerializeField] Color offBeatColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
     [Header("Debug")]
     [SerializeField] bool debug = false;
     [SerializeField] AudioClip clipOnBeat;
+    [SerializeField] Color debugColor = new Color(1.0f, 0.0f, 1.0f, 1.0f);
 
     // 
     private float startTime;
@@ -48,63 +50,62 @@ public class BeatMeterController : MonoBehaviour
         float timeSinceStart = Time.time - startTime;
         float secondsPerBeat = 60.0f / (float)bpm;
 
-        int currentBeat = (int)Mathf.Floor(timeSinceStart / secondsPerBeat); // number of beats since the beginning
+        int currentBeat = (int)Mathf.Round(timeSinceStart / secondsPerBeat); // number of beats since the beginning (rounded)
         float currentBeatTimeStart = currentBeat * secondsPerBeat; 
-        float currentBeatTime = Time.time - currentBeatTimeStart; // time spent since the last beat started
+        float currentBeatTime = Time.time - currentBeatTimeStart; // time spent since the last beat started, from [-secondsPerBeat/2;secondsPerBeat/2]
+        float currentBeatTimeAbs = Mathf.Abs(currentBeatTime); 
 
-        Color white = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-        Color red = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+        float timeAlmostOffBeat = 0.1f;
+        float timeAlmostOnBeat = 0.1f;
+        float timeOnBeat = 0.1f;
 
-        // according from the time since the start of the beat
-        // set the state, color the sprites and play a debug sound (if needed)
-        if (currentBeatTime < 0.1) // 100ms from the beat start
+        // set the state according to the time since the start of the beat
+        if (currentBeatTimeAbs > timeAlmostOffBeat + timeAlmostOnBeat + timeOnBeat * 0.5f)
+        {
+            state = Beat.OffBeat;
+        }
+        else if (currentBeatTimeAbs > timeAlmostOnBeat + timeOnBeat * 0.5f)
+        {
+            state = Beat.AlmostOffBeat;
+        }
+        else if (currentBeatTimeAbs > timeOnBeat * 0.5f)
+        {
+            state = Beat.AlmostOnBeat;
+        }
+        else
         {
             state = Beat.OnBeat;
+        }
+
+
+        // color the sprites and play a debug sound (if needed)
+        for (int i = 0; i < 5; i++ )
+        {
+            bars[i].color = offBeatColor;
+        }
+
+        if (state == Beat.OnBeat)
+        {
+            bars[2].color = debug ? debugColor : onBeatColor;
 
             // if debug mode and the clip wasn't played on this beat, play it 
-            if (clipPlayed == false && debug && audioSource)
+            if (clipPlayed == false && audioSource && debug)
             {
                 clipPlayed = true;
                 audioSource.PlayOneShot(clipOnBeat);
             }
-
-            mainBar.color = red;
-            secondBars[0].color = white;
-            secondBars[1].color = white;
-            thirdBars[0].color = white;
-            thirdBars[1].color = white;
         }
-        else if (currentBeatTime < 0.2) // 200ms from the beat start
+        else if (state == Beat.AlmostOnBeat)
         {
-            state = Beat.AlmostOnBeat;
+            bars[currentBeatTime < 0 ? 1 : 3].color = debug ? debugColor : onBeatColor;
 
             // reset the audio clip debug
             clipPlayed = false;
-
-            mainBar.color = white;
-            secondBars[0].color = red;
-            secondBars[1].color = red;
-            thirdBars[0].color = white;
-            thirdBars[1].color = white;
         }
-        else if (currentBeatTime < 0.3) // 300ms from the beat start
+        else if (state == Beat.AlmostOffBeat)
         {
-            state = Beat.AlmostOffBeat;
-
-            mainBar.color = white;
-            secondBars[0].color = white;
-            secondBars[1].color = white;
-            thirdBars[0].color = red;
-            thirdBars[1].color = red;
-        }
-        else
-        {
-            state = Beat.OffBeat;
-            mainBar.color = white;
-            secondBars[0].color = white;
-            secondBars[1].color = white;
-            thirdBars[0].color = white;
-            thirdBars[1].color = white;
+            bars[currentBeatTime < 0 ? 0 : 4].color = debug ? debugColor : onBeatColor;
         }
     }
 }
+
