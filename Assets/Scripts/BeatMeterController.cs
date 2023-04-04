@@ -16,6 +16,7 @@ public class BeatMeterController : MonoBehaviour
 
     [Header("BPM")]
     [SerializeField] int bpm = 120;
+    [SerializeField] float timePerStep = 0.1f;
     [SerializeField] bool leftToRight = false;
     [SerializeField] public Beat state = Beat.OffBeat;
 
@@ -56,20 +57,17 @@ public class BeatMeterController : MonoBehaviour
         float currentBeatTime = Time.time - currentBeatTimeStart; // time spent since the last beat started, from [-secondsPerBeat/2;secondsPerBeat/2]
         float currentBeatTimeAbs = Mathf.Abs(currentBeatTime); 
 
-        float timeAlmostOffBeat = 0.1f;
-        float timeAlmostOnBeat = 0.1f;
-        float timeOnBeat = 0.1f;
 
         // set the state according to the time since the start of the beat
-        if (currentBeatTimeAbs > timeAlmostOffBeat + timeAlmostOnBeat + timeOnBeat * 0.5f)
+        if (currentBeatTimeAbs > timePerStep * 2.5f)
         {
             state = Beat.OffBeat;
         }
-        else if (currentBeatTimeAbs > timeAlmostOnBeat + timeOnBeat * 0.5f)
+        else if (currentBeatTimeAbs > timePerStep * 1.5f)
         {
             state = Beat.AlmostOffBeat;
         }
-        else if (currentBeatTimeAbs > timeOnBeat * 0.5f)
+        else if (currentBeatTimeAbs > timePerStep * 0.5f)
         {
             state = Beat.AlmostOnBeat;
         }
