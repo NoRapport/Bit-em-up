@@ -270,6 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 44893195}
   - component: {fileID: 44893197}
+  - component: {fileID: 44893196}
   - component: {fileID: 44893198}
   - component: {fileID: 44893199}
   m_Layer: 5
@@ -291,10 +292,10 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 694931295}
-  - {fileID: 577650968}
   - {fileID: 171522660}
+  - {fileID: 577650968}
   - {fileID: 799063260}
+  - {fileID: 694931295}
   - {fileID: 284648267}
   m_Father: {fileID: 1435437536}
   m_RootOrder: 0
@@ -304,6 +305,36 @@ RectTransform:
   m_AnchoredPosition: {x: 140, y: -337.53452}
   m_SizeDelta: {x: 11.7136, y: 57.65}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &44893196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44893194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &44893197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -326,17 +357,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 120
   state: 0
-  bars:
-  - {fileID: 694931296}
+  mainBar: {fileID: 171522661}
+  secondBars:
   - {fileID: 577650969}
-  - {fileID: 171522661}
   - {fileID: 799063261}
+  thirdBars:
+  - {fileID: 694931296}
   - {fileID: 284648268}
-  onBeatColor: {r: 1, g: 1, b: 1, a: 0.5}
-  offBeatColor: {r: 1, g: 1, b: 1, a: 1}
   debug: 0
   clipOnBeat: {fileID: 8300000, guid: 5ad5016c812df2a45b299edea1581906, type: 3}
-  debugColor: {r: 1, g: 0, b: 1, a: 1}
 --- !u!82 &44893199
 AudioSource:
   m_ObjectHideFlags: 0
@@ -620,7 +649,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 44893195}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -640,7 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7647059}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2284,7 +2313,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 44893195}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -24743,7 +24772,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 44893195}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
