@@ -2169,7 +2169,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626654652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: da9f00e359756bd449cfe9c225686a1e, type: 2}
   m_CullingMode: 0
@@ -2189,7 +2189,7 @@ VideoPlayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626654652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_VideoClip: {fileID: 32900000, guid: 96848218a044bb8cf8b7c498cdb5b5c7, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0

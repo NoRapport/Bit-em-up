@@ -93,7 +93,7 @@ public class BeatMeterController : MonoBehaviour
         if (state == Beat.OnBeat)
         {
             bars[2].color = debug ? debugColor : onBeatColor;
-            bars[2].transform.localScale = new Vector3(1.6f, 1.6f, 1);
+            bars[2].transform.localScale = new Vector3(2, 1.6f, 1);
 
             // if debug mode and the clip wasn't played on this beat, play it
             if (clipPlayed == false && audioSource && debug)
