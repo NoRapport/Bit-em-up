@@ -8,6 +8,8 @@ public class BeatMeterController : MonoBehaviour
 {
   public static BeatMeterController instance;
 
+    public Text bpmText;
+
     public enum Beat
     {
         OnBeat,
@@ -64,6 +66,8 @@ public class BeatMeterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bpmText.text = bpm.ToString();
+
         float timeSinceStart = Time.time - startTime;
         float secondsPerBeat = 60.0f / (float)bpm;
 
