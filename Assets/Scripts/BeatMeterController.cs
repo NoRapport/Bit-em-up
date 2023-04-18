@@ -105,11 +105,15 @@ public class BeatMeterController : MonoBehaviour
         else if (state == Beat.AlmostOnBeat)
         {
             if (leftToRight)
+            {
                 bars[currentBeatTime < 0 ? 1 : 3].color = debug ? debugColor : almostOnBeatColor;
                 bars[currentBeatTime < 0 ? 1 : 3].transform.localScale = new Vector3(1.3f, 1.5f, 1);
+            }
             else
+            {
                 bars[currentBeatTime > 0 ? 1 : 3].color = debug ? debugColor : almostOnBeatColor;
                 bars[currentBeatTime > 0 ? 1 : 3].transform.localScale = new Vector3(1.3f, 1.5f, 1);
+            }
 
             // reset the audio clip debug
             clipPlayed = false;
@@ -118,11 +122,15 @@ public class BeatMeterController : MonoBehaviour
         {
 
             if (leftToRight)
+            {
                 bars[currentBeatTime < 0 ? 0 : 4].color = debug ? debugColor : almostOffBeatColor;
                 bars[currentBeatTime < 0 ? 1 : 3].transform.localScale = new Vector3(1.3f, 1.5f, 1);
+            }
             else
+            {
                 bars[currentBeatTime > 0 ? 0 : 4].color = debug ? debugColor : almostOffBeatColor;
                 bars[currentBeatTime > 0 ? 0 : 4].transform.localScale = new Vector3(1.3f, 1.5f, 1);
+            }
         }
     }
 }
