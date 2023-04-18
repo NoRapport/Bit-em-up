@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PowerUpRangedAttack
   m_EditorClassIdentifier: 
   size: 0.25
-  delay: -0.2
+  delay: -0.025
   power: 0.25
   speed: 0
   target:
