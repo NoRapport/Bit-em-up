@@ -27,4 +27,5 @@ namespace TopDownCharacter2D.Stats
 
         public AttackConfig attackConfig;
     }
+
 }

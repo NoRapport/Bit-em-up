@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerShootConfig
   m_EditorClassIdentifier: 
   size: 1
-  delay: 0.15
+  delay: 0.5
   power: 1
   speed: 15
   target:

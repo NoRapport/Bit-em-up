@@ -25108,6 +25108,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1766844560934434724, guid: 8423a12a49559c97888ba0362cd2530d, type: 3}
+      propertyPath: baseStats.statsChangeType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1766844560934434728, guid: 8423a12a49559c97888ba0362cd2530d, type: 3}
       propertyPath: m_Name
       value: Julie

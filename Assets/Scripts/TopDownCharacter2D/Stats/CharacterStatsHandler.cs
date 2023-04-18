@@ -60,6 +60,7 @@ namespace TopDownCharacter2D.Stats
                 {
                     UpdateStats((o, o1) => o * o1, modifier);
                 }
+                BeatMeterController.instance.synchBpm(CurrentStats.attackConfig.delay);
             }
 
             LimitAllStats();
@@ -102,6 +103,7 @@ namespace TopDownCharacter2D.Stats
                     ApplyMeleeStats(operation, newModifier);
                     break;
             }
+
         }
 
         /// <summary>
@@ -156,7 +158,7 @@ namespace TopDownCharacter2D.Stats
                 operation(currentRangedAttacks.projectileColor.b, rangedAttacksModifier.projectileColor.b),
                 operation(currentRangedAttacks.projectileColor.a, rangedAttacksModifier.projectileColor.a));
         }
-        
+
         /// <summary>
         ///     Applies a bullet stats modifier
         /// </summary>
@@ -170,14 +172,14 @@ namespace TopDownCharacter2D.Stats
             {
                 return;
             }
-            
+
             // NOTE: In case of a power up we ignore the curves
-            
+
             MeleeAttackConfig meleeAttacksModifier = (MeleeAttackConfig) newModifier.attackConfig;
             currentMeleeAttacks.swingAngle =
                 operation(currentMeleeAttacks.swingAngle, meleeAttacksModifier.swingAngle);
-            
-            currentMeleeAttacks.thrustDistance = 
+
+            currentMeleeAttacks.thrustDistance =
                 operation(currentMeleeAttacks.thrustDistance, meleeAttacksModifier.thrustDistance);
         }
 

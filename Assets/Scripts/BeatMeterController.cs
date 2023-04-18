@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class BeatMeterController : MonoBehaviour
 {
+  public static BeatMeterController instance;
+
     public enum Beat
     {
         OnBeat,
@@ -15,7 +17,7 @@ public class BeatMeterController : MonoBehaviour
     }
 
     [Header("BPM")]
-    [SerializeField] int bpm = 120;
+    [SerializeField] public float bpm = 120;
     [SerializeField] float timePerStep = 0.1f;
     [SerializeField] bool leftToRight = false;
     [SerializeField] public Beat state = Beat.OffBeat;
@@ -43,6 +45,13 @@ public class BeatMeterController : MonoBehaviour
 
         //Yes sure, why not a checkbox ;P
         leftToRight = false;
+
+        if (instance != null) {
+          Debug.LogWarning("Il n'y a plus d'une instance de BeatMeter dans la scene");
+          return;
+        }
+
+        instance = this;
 
     }
 
@@ -132,5 +141,11 @@ public class BeatMeterController : MonoBehaviour
                 bars[currentBeatTime > 0 ? 0 : 4].transform.localScale = new Vector3(1.3f, 1.5f, 1);
             }
         }
+    }
+
+    public void synchBpm(float value)
+    {
+      bpm = 60/value;
+      Debug.Log(bpm);
     }
 }
