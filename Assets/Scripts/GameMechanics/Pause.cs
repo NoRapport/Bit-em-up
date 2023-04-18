@@ -6,19 +6,28 @@ public class Pause : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
-    void Update()
+    public static Pause instance;
+
+    void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-          if (gameIsPaused)
-          {
-            Resume();
-          }
-          else
-          {
-            Paused();
-          }
-        }
+      if (instance != null) {
+        Debug.LogWarning("Il n'y a plus d'une instance de Pause dans la scene");
+        return;
+      }
+
+      instance = this;
+    }
+
+    public void PausePressed()
+    {
+      if (gameIsPaused)
+      {
+        Resume();
+      }
+      else
+      {
+        Paused();
+      }
     }
 
     void Paused()

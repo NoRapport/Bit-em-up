@@ -116,6 +116,11 @@ namespace TopDownCharacter2D.Controllers
           }
         }
 
+        public void OnPause(InputValue value)
+        {
+            Pause.instance.PausePressed();
+        }
+
         #endregion
     }
 }
