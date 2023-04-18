@@ -106,6 +106,7 @@ public class BeatMeterController : MonoBehaviour
         {
             if (leftToRight)
                 bars[currentBeatTime < 0 ? 1 : 3].color = debug ? debugColor : almostOnBeatColor;
+                bars[currentBeatTime < 0 ? 1 : 3].transform.localScale = new Vector3(1.3f, 1.5f, 1);
             else
                 bars[currentBeatTime > 0 ? 1 : 3].color = debug ? debugColor : almostOnBeatColor;
                 bars[currentBeatTime > 0 ? 1 : 3].transform.localScale = new Vector3(1.3f, 1.5f, 1);
@@ -118,6 +119,7 @@ public class BeatMeterController : MonoBehaviour
 
             if (leftToRight)
                 bars[currentBeatTime < 0 ? 0 : 4].color = debug ? debugColor : almostOffBeatColor;
+                bars[currentBeatTime < 0 ? 1 : 3].transform.localScale = new Vector3(1.3f, 1.5f, 1);
             else
                 bars[currentBeatTime > 0 ? 0 : 4].color = debug ? debugColor : almostOffBeatColor;
                 bars[currentBeatTime > 0 ? 0 : 4].transform.localScale = new Vector3(1.3f, 1.5f, 1);
