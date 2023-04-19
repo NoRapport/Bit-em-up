@@ -76,7 +76,7 @@ public class LevelManager : MonoBehaviour
         lastRabbitNumber = rabbitNumber;
         rabbitNumber = newRabbitNumber;
       }
-      Debug.Log("Population de Lapins : " + rabbitNumber);
+      Debug.Log("Population de Lapins sur le niveau = " + rabbitNumber);
 
       LaunchLevelSequence();
     }
