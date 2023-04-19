@@ -60,7 +60,8 @@ public class BeatMeterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startTime = Time.time;
+        startTime = Time.timeSinceLevelLoad;
+        Debug.Log(startTime);
     }
 
     // Update is called once per frame

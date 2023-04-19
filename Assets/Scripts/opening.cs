@@ -7,7 +7,7 @@ public class opening : MonoBehaviour
 {
     void Start()
     {
-      StartCoroutine(WaitAndLoad(4));
+      StartCoroutine(WaitAndLoad(3));
     }
 
     private IEnumerator WaitAndLoad(float time)
