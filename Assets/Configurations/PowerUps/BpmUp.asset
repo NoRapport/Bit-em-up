@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aca20c846ab409baaeb6c4782674e6c, type: 3}
-  m_Name: PowerUpRangedAttack
+  m_Name: BpmUp
   m_EditorClassIdentifier: 
-  size: 1.1
-  delay: 0.99
-  power: 1.1
-  speed: 0
+  size: 1.03
+  delay: 0.9917355
+  power: 1.03
+  speed: 1
   target:
     serializedVersion: 2
-    m_Bits: 0
-  duration: 0
-  spread: 0
-  numberOfProjectilesPerShot: 0
-  multipleProjectilesAngle: 0
-  projectileColor: {r: 0, g: 0, b: 0, a: 0}
+    m_Bits: 64
+  duration: 1
+  spread: 1
+  numberOfProjectilesPerShot: 1
+  multipleProjectilesAngle: 1
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}

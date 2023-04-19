@@ -61,13 +61,14 @@ public class BeatMeterController : MonoBehaviour
     void Start()
     {
         startTime = Time.timeSinceLevelLoad;
-        Debug.Log(startTime);
+        //Debug.Log(startTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        bpmText.text = bpm.ToString();
+        int bpmInt = (int)bpm;
+        bpmText.text = bpmInt.ToString();
 
         float timeSinceStart = Time.time - startTime;
         float secondsPerBeat = 60.0f / (float)bpm;
@@ -151,6 +152,5 @@ public class BeatMeterController : MonoBehaviour
     public void synchBpm(float value)
     {
       bpm = 60/value;
-      Debug.Log(bpm);
     }
 }

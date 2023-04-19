@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: c8261f6c44994d548a186b6959190ec6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.23137255, b: 0.90588236, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 6879562193199501571}
   - component: {fileID: 6879562193199501568}
   m_Layer: 8
-  m_Name: PowerUp
+  m_Name: BpmUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   - statsChangeType: 1
     maxHealth: 1
     speed: 1
-    attackConfig: {fileID: 11400000, guid: 2a3b45a8185bc6349a9503ae1d3f049f, type: 2}
+    attackConfig: {fileID: 11400000, guid: 5a805b0558ac82b988c631d184602555, type: 2}
 --- !u!111 &6879562193199501570
 Animation:
   m_ObjectHideFlags: 0
