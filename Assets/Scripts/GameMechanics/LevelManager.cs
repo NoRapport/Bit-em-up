@@ -39,6 +39,7 @@ public class LevelManager : MonoBehaviour
       if(Input.GetKeyDown(KeyCode.L))
       {
         level+=1;
+        rabbitNumber+=10;
       }
 
       if(Input.GetKeyDown(KeyCode.M))
