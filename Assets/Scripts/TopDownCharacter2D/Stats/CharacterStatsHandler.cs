@@ -60,6 +60,8 @@ namespace TopDownCharacter2D.Stats
                 {
                     UpdateStats((o, o1) => o * o1, modifier);
                 }
+
+                //Synch BPM after stats changes
                 BeatMeterController.instance.synchBpm(CurrentStats.attackConfig.delay);
             }
 
