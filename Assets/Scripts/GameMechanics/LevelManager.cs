@@ -13,6 +13,10 @@ public class LevelManager : MonoBehaviour
 
     public static LevelManager instance;
 
+    public int rabbitNumber = 1;
+    private int lastRabbitNumber;
+    private int newRabbitNumber;
+
     void Awake()
     {
       if (instance != null) {
@@ -56,13 +60,24 @@ public class LevelManager : MonoBehaviour
     {
       SpawnMinion.instance.minionSpawners = GameObject.FindGameObjectsWithTag("MinionSpawner");
       SpawnMinion.instance.minionSpawnersList = new List<GameObject>(SpawnMinion.instance.minionSpawners);
-      StartCoroutine(SpawnMinion.instance.MinionWave("slimeGhost", level, 3));
+      StartCoroutine(SpawnMinion.instance.MinionWave("slimeGhost", rabbitNumber, 3));
     }
 
     public void AutoSpawn()
     {
       level+=1;
       lvlAnimator.SetTrigger("LvLUp");
+
+      if (level <= 1) {
+        rabbitNumber = 1;
+      }
+      if (level > 1) {
+        newRabbitNumber = rabbitNumber + lastRabbitNumber;
+        lastRabbitNumber = rabbitNumber;
+        rabbitNumber = newRabbitNumber;
+      }
+      Debug.Log("Population de Lapins : " + rabbitNumber);
+
       LaunchLevelSequence();
     }
 }
