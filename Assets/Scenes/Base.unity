@@ -38544,9 +38544,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 5224a0c7767ec14a498e0042c81ea9dc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5568628}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -38555,7 +38555,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &808793826
 Transform:
   m_ObjectHideFlags: 0
@@ -38564,7 +38564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808793823}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -120.8, y: -3.5, z: 0}
+  m_LocalPosition: {x: -120.75, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38839,7 +38839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1766844560262000346, guid: 8423a12a49559c97888ba0362cd2530d, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1766844560292611533, guid: 8423a12a49559c97888ba0362cd2530d, type: 3}
       propertyPath: m_IsActive
