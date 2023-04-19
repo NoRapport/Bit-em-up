@@ -27,11 +27,20 @@ namespace TopDownCharacter2D.Attacks.Range
 
         public ref Vector2 Direction => ref _direction;
 
+        //qBit Random Damage
+        private float qBit;
+        private float qBitEffect;
+
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _rb = GetComponent<Rigidbody2D>();
             _trail = GetComponent<TrailRenderer>();
+
+            //Dice a qBit
+            qBit = Random.Range(0, 10);
+            qBitEffect = (qBit/10)+0.5f;
+            Debug.Log(qBitEffect);
         }
 
         private void Update()
@@ -69,7 +78,8 @@ namespace TopDownCharacter2D.Attacks.Range
                 HealthSystem health = other.gameObject.GetComponent<HealthSystem>();
                 if (health != null)
                 {
-                    health.ChangeHealth(-_config.power);
+                    //original health.ChangeHealth(-_config.power);
+                    health.ChangeHealth(-_config.power*qBitEffect); //with qBit effect
                     TopDownKnockBack knockBack = other.gameObject.GetComponent<TopDownKnockBack>();
                     if (knockBack != null)
                     {
