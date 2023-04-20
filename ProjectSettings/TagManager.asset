@@ -11,6 +11,7 @@ TagManager:
   - GBAarrow
   - Dead
   - Bullet
+  - Portal
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,8 @@ namespace TopDownCharacter2D.Controllers
 
     // Auto lock objects
         public GameObject[] targetList;
+        public GameObject[] enemyList;
+        //public GameObject[] portal;
         public GameObject targetLocked;
         public GameObject targetLastLocked;
     //
@@ -29,7 +31,9 @@ namespace TopDownCharacter2D.Controllers
     // Auto lock functions
         void FixedUpdate()
         {
-            targetList = GameObject.FindGameObjectsWithTag("Target");
+            enemyList = GameObject.FindGameObjectsWithTag("Target");
+            //portal = GameObject.FindGameObjectsWithTag("Portal");
+            targetList = enemyList;
             targetLocked = TargetLocked();
 
             if (targetList.Length != 0) {
