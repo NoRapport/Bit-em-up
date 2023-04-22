@@ -118,6 +118,13 @@ namespace TopDownCharacter2D.Controllers
           } else {
             IsAttacking = false;
           }
+
+          if (value.isPressed) {
+            BeatMeterController.instance.setCurrentBarActive();
+          } else {
+            BeatMeterController.instance.unsetActiveBar();
+          }
+
         }
 
         public void OnPause(InputValue value)
