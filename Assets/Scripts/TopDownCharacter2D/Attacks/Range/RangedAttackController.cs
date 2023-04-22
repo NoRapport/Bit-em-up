@@ -31,6 +31,9 @@ namespace TopDownCharacter2D.Attacks.Range
         private float qBit;
         private float qBitEffect;
 
+        //OnBeat bonus
+        private float onBeatBonus = 1.0f;
+
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -58,6 +61,17 @@ namespace TopDownCharacter2D.Attacks.Range
             }
 
             _rb.velocity = _direction * _config.speed;
+
+            //Check the beat and define bonus
+            if (BeatMeterController.instance.selectedBar == 0 || BeatMeterController.instance.selectedBar == 4) {
+              onBeatBonus = 1.5f;
+            } else if (BeatMeterController.instance.selectedBar == 1 || BeatMeterController.instance.selectedBar == 3) {
+              onBeatBonus = 2.0f;
+            } else if (BeatMeterController.instance.selectedBar == 2) {
+              onBeatBonus = 3.0f;
+            } else {
+              onBeatBonus = 1.0f;
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -79,7 +93,7 @@ namespace TopDownCharacter2D.Attacks.Range
                 if (health != null)
                 {
                     //original health.ChangeHealth(-_config.power);
-                    health.ChangeHealth(-_config.power*qBitEffect); //with qBit effect
+                    health.ChangeHealth(-_config.power*qBitEffect*onBeatBonus); //with qBit effect and onBeatBonus
                     TopDownKnockBack knockBack = other.gameObject.GetComponent<TopDownKnockBack>();
                     if (knockBack != null)
                     {
