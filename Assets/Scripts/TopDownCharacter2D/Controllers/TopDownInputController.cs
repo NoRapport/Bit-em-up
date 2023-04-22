@@ -124,7 +124,6 @@ namespace TopDownCharacter2D.Controllers
           } else {
             BeatMeterController.instance.unsetActiveBar();
           }
-
         }
 
         public void OnPause(InputValue value)
