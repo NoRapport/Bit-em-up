@@ -43,7 +43,7 @@ public class BeatMeterController : MonoBehaviour
     private AudioSource audioSource;
 
     private int currentBar = -1;
-    private int selectedBar = -1;
+    public int selectedBar = -1;
 
     private void Awake()
     {
@@ -89,81 +89,80 @@ public class BeatMeterController : MonoBehaviour
             state = Beat.OffBeat;
             currentBar = -1;
         }
-        else if (currentBeatTimeAbs > timePerStep * 1.5f)
-        {
-            state = Beat.AlmostOffBeat;
-            if (leftToRight)
-                currentBar = currentBeatTime < 0 ? 0 : 4;
-            else
-                currentBar = currentBeatTime > 0 ? 0 : 4;
-        }
-        else if (currentBeatTimeAbs > timePerStep * 0.5f)
-        {
-            state = Beat.AlmostOnBeat;
-            if (leftToRight)
-                currentBar = currentBeatTime < 0 ? 1 : 3;
-            else
-                currentBar = currentBeatTime > 0 ? 1 : 3;
-        }
         else
         {
-            state = Beat.OnBeat;
-            currentBar = 2;
-        }
+            if (currentBeatTimeAbs > timePerStep * 1.5f)
+            {
+                state = Beat.AlmostOffBeat;
+                currentBar = currentBeatTime < 0 ? 0 : 4;
+            }
+            else if (currentBeatTimeAbs > timePerStep * 0.5f)
+            {
+                state = Beat.AlmostOnBeat;
+                currentBar = currentBeatTime < 0 ? 1 : 3;
+            }
+            else
+            {
+                state = Beat.OnBeat;
+                currentBar = 2;
+            }
 
+            if (leftToRight == false) // if the order is reversed, reverse the bar id: 0->4, 1->3, 3->1, 4->0
+                currentBar = 4 - currentBar;
+        }
 
         // color the sprites and play a debug sound (if needed)
-        for (int i = 0; i < 5; i++ )
         {
-            bars[i].color = offBeatColor;
-            bars[i].transform.localScale = new Vector3(1, 1, 1);
-        }
+            // retrieve the color and scales for each bar, when they are the current
+            Color[] colors = new Color[5] {
+                almostOffBeatColor,
+                almostOnBeatColor,
+                onBeatColor,
+                almostOnBeatColor,
+                almostOffBeatColor
+            };
 
-        if (state == Beat.OnBeat)
-        {
-            bars[2].color = debug ? debugColor : onBeatColor;
-            bars[2].transform.localScale = new Vector3(2, 1.6f, 1);
+            Vector3[] scales = new Vector3[5] {
+                new Vector3(1.3f, 1.5f, 1.0f),
+                new Vector3(1.3f, 1.5f, 1.0f),
+                new Vector3(2.0f, 1.6f, 1.0f),
+                new Vector3(1.3f, 1.5f, 1.0f),
+                new Vector3(1.3f, 1.5f, 1.0f)
+            };
+
+            // reset each bar to their default color/scale
+            for (int i = 0; i < 5; i++)
+            {
+                bars[i].color = offBeatColor;
+                bars[i].transform.localScale = new Vector3(1, 1, 1);
+            }
+
+            // for the current bar apply its color and scale
+            if (currentBar != -1)
+            {
+                bars[currentBar].color = debug ? debugColor : colors[currentBar];
+                bars[currentBar].transform.localScale = scales[currentBar];
+            }
+
+            // put the selected bar in green
+            if (selectedBar != -1)
+            {
+                bars[selectedBar].color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+            }
 
             // if debug mode and the clip wasn't played on this beat, play it
-            if (clipPlayed == false && audioSource && debug)
+            if (state == Beat.OnBeat)
             {
-                clipPlayed = true;
-                audioSource.PlayOneShot(clipOnBeat);
+                if (clipPlayed == false && audioSource && debug)
+                {
+                    clipPlayed = true;
+                    audioSource.PlayOneShot(clipOnBeat);
+                }
             }
-        }
-        else if (state == Beat.AlmostOnBeat)
-        {
-            if (leftToRight)
+            else // reset the audio clip debug
             {
-                bars[currentBeatTime < 0 ? 1 : 3].color = debug ? debugColor : almostOnBeatColor;
-                bars[currentBeatTime < 0 ? 1 : 3].transform.localScale = new Vector3(1.3f, 1.5f, 1);
+                clipPlayed = false;
             }
-            else
-            {
-                bars[currentBeatTime > 0 ? 1 : 3].color = debug ? debugColor : almostOnBeatColor;
-                bars[currentBeatTime > 0 ? 1 : 3].transform.localScale = new Vector3(1.3f, 1.5f, 1);
-            }
-
-            // reset the audio clip debug
-            clipPlayed = false;
-        }
-        else if (state == Beat.AlmostOffBeat)
-        {
-            if (leftToRight)
-            {
-                bars[currentBeatTime < 0 ? 0 : 4].color = debug ? debugColor : almostOffBeatColor;
-                bars[currentBeatTime < 0 ? 1 : 3].transform.localScale = new Vector3(1.3f, 1.5f, 1);
-            }
-            else
-            {
-                bars[currentBeatTime > 0 ? 0 : 4].color = debug ? debugColor : almostOffBeatColor;
-                bars[currentBeatTime > 0 ? 0 : 4].transform.localScale = new Vector3(1.3f, 1.5f, 1);
-            }
-        }
-
-        if (selectedBar != -1)
-        {
-            bars[selectedBar].color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
         }
     }
 
