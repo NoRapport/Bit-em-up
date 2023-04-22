@@ -41,6 +41,8 @@ public class BeatMeterController : MonoBehaviour
     private bool clipPlayed = false;
     private AudioSource audioSource;
 
+    private int selectedBar = -1;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -135,7 +137,6 @@ public class BeatMeterController : MonoBehaviour
         }
         else if (state == Beat.AlmostOffBeat)
         {
-
             if (leftToRight)
             {
                 bars[currentBeatTime < 0 ? 0 : 4].color = debug ? debugColor : almostOffBeatColor;
@@ -147,10 +148,25 @@ public class BeatMeterController : MonoBehaviour
                 bars[currentBeatTime > 0 ? 0 : 4].transform.localScale = new Vector3(1.3f, 1.5f, 1);
             }
         }
+
+        if (selectedBar != -1)
+        {
+            bars[selectedBar].color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+        }
     }
 
     public void synchBpm(float value)
     {
       bpm = 60/value;
+    }
+
+    public void setCurrentBarActive()
+    {
+        selectedBar = 0;
+    }
+
+    public void unsetActiveBar()
+    {
+        selectedBar = -1;
     }
 }
