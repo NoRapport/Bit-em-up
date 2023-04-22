@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class BeatMeterController : MonoBehaviour
@@ -41,6 +42,7 @@ public class BeatMeterController : MonoBehaviour
     private bool clipPlayed = false;
     private AudioSource audioSource;
 
+    private int currentBar = -1;
     private int selectedBar = -1;
 
     private void Awake()
@@ -85,18 +87,28 @@ public class BeatMeterController : MonoBehaviour
         if (currentBeatTimeAbs > timePerStep * 2.5f)
         {
             state = Beat.OffBeat;
+            currentBar = -1;
         }
         else if (currentBeatTimeAbs > timePerStep * 1.5f)
         {
             state = Beat.AlmostOffBeat;
+            if (leftToRight)
+                currentBar = currentBeatTime < 0 ? 0 : 4;
+            else
+                currentBar = currentBeatTime > 0 ? 0 : 4;
         }
         else if (currentBeatTimeAbs > timePerStep * 0.5f)
         {
             state = Beat.AlmostOnBeat;
+            if (leftToRight)
+                currentBar = currentBeatTime < 0 ? 1 : 3;
+            else
+                currentBar = currentBeatTime > 0 ? 1 : 3;
         }
         else
         {
             state = Beat.OnBeat;
+            currentBar = 2;
         }
 
 
@@ -162,7 +174,7 @@ public class BeatMeterController : MonoBehaviour
 
     public void setCurrentBarActive()
     {
-        selectedBar = 0;
+        selectedBar = currentBar;
     }
 
     public void unsetActiveBar()
