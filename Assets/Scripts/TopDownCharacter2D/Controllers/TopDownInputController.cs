@@ -19,6 +19,7 @@ namespace TopDownCharacter2D.Controllers
 
         public GameObject weapon;
 
+        public bool isInputEnable = true;
 
 //        private Camera _camera;
 //
@@ -84,8 +85,10 @@ namespace TopDownCharacter2D.Controllers
         /// <param name="value"> The value of the input </param>
         public void OnMove(InputValue value)
         {
+          if (isInputEnable) {
             Vector2 moveInput = value.Get<Vector2>().normalized;
             OnMoveEvent.Invoke(moveInput);
+          }
         }
 
 //        /// <summary>
@@ -113,16 +116,18 @@ namespace TopDownCharacter2D.Controllers
         /// <param name="value"> The value of the input </param>
         public void OnFire(InputValue value)
         {
-          if (targetList.Length != 0) {
-            IsAttacking = value.isPressed;
-          } else {
-            IsAttacking = false;
-          }
+          if (isInputEnable) {
+            if (targetList.Length != 0) {
+              IsAttacking = value.isPressed;
+            } else {
+              IsAttacking = false;
+            }
 
-          if (value.isPressed) {
-            BeatMeterController.instance.setCurrentBarActive();
-          } else {
-            BeatMeterController.instance.unsetActiveBar();
+            if (value.isPressed) {
+              BeatMeterController.instance.setCurrentBarActive();
+            } else {
+              BeatMeterController.instance.unsetActiveBar();
+            }
           }
         }
 

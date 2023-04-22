@@ -810,7 +810,6 @@ Transform:
   - {fileID: 1954108984}
   - {fileID: 1747632063}
   - {fileID: 808793826}
-  - {fileID: 1702202612}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1396,7 +1395,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 226342503}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2677687061650415008, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
       propertyPath: tvSpawner
@@ -1408,11 +1407,11 @@ PrefabInstance:
       objectReference: {fileID: 88680568}
     - target: {fileID: 3250774376250135938, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
       propertyPath: m_Name
-      value: diabloPortal (1)
+      value: diabloPortalTest
       objectReference: {fileID: 0}
     - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2243,7 +2242,7 @@ Transform:
   - {fileID: 1091188206}
   - {fileID: 1663747747}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &564151016
 GameObject:
@@ -48472,11 +48471,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665697807}
   m_CullTransparentMesh: 1
---- !u!4 &1702202612 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
-  m_PrefabInstance: {fileID: 380736939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1715795594
 GameObject:
   m_ObjectHideFlags: 0

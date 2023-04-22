@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class diabloPortal : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class diabloPortal : MonoBehaviour
   {
     if(collision.CompareTag("Player"))
     {
+        collision.GetComponent<PlayerInput>().enabled = false;
         globalLight.GetComponent<Animator>().SetTrigger("FadeOut");
         StartCoroutine(teleportToTv(collision));
     }
@@ -20,9 +22,12 @@ public class diabloPortal : MonoBehaviour
 
   public IEnumerator teleportToTv(Collider2D _collision)
   {
-      yield return new WaitForSeconds(0.42f);
+      yield return new WaitForSeconds(1);
       _collision.transform.position = tvSpawner.transform.position;
+      yield return new WaitForSeconds(0.5f);
       _collision.transform.GetComponent<Animator>().SetTrigger("Spawning");
+      yield return new WaitForSeconds(1);
+      _collision.GetComponent<PlayerInput>().enabled = true;
   }
 
 }
