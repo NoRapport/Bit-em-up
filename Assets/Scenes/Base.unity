@@ -1713,7 +1713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464018877}
   - component: {fileID: 464018878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ZoneB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,7 +1884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512759468}
   - component: {fileID: 512759469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ZoneA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39342,7 +39342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1091188206}
   - component: {fileID: 1091188207}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ZoneC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48342,7 +48342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663747747}
   - component: {fileID: 1663747748}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ZoneD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
