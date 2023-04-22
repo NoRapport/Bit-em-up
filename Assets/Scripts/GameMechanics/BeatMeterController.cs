@@ -31,6 +31,7 @@ public class BeatMeterController : MonoBehaviour
     [SerializeField] Color almostOnBeatColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     [SerializeField] Color almostOffBeatColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     [SerializeField] Color offBeatColor = new Color(1.0f, 1.0f, 1.0f, 0.5f);
+    public Color beatPerfectColor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
 
     [Header("Debug")]
     [SerializeField] bool debug = false;

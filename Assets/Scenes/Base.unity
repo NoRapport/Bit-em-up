@@ -339,6 +339,7 @@ MonoBehaviour:
   almostOnBeatColor: {r: 1, g: 1, b: 1, a: 0.88235295}
   almostOffBeatColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   offBeatColor: {r: 1, g: 1, b: 1, a: 0.29411766}
+  beatPerfectColor: {r: 0.9811321, g: 0.20823081, b: 0.06941971, a: 1}
   debug: 0
   clipOnBeat: {fileID: 8300000, guid: 5e9c4705431ecbc418957accd39b8220, type: 3}
   debugColor: {r: 0.990566, g: 0.4999555, b: 0.7475384, a: 1}

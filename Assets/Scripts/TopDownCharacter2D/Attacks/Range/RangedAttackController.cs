@@ -33,6 +33,8 @@ namespace TopDownCharacter2D.Attacks.Range
 
         //OnBeat bonus
         private float onBeatBonus = 1.0f;
+        private bool beatPerfect = false;
+        private Color beatPerfectColor;
 
         private void Awake()
         {
@@ -44,6 +46,8 @@ namespace TopDownCharacter2D.Attacks.Range
             qBit = Random.Range(0, 10);
             qBitEffect = (qBit/10)+0.5f;
             Debug.Log(qBitEffect);
+
+            beatPerfectColor = BeatMeterController.instance.beatPerfectColor;
         }
 
         private void Update()
@@ -65,12 +69,16 @@ namespace TopDownCharacter2D.Attacks.Range
             //Check the beat and define bonus
             if (BeatMeterController.instance.selectedBar == 0 || BeatMeterController.instance.selectedBar == 4) {
               onBeatBonus = 1.5f;
+              beatPerfect = false;
             } else if (BeatMeterController.instance.selectedBar == 1 || BeatMeterController.instance.selectedBar == 3) {
               onBeatBonus = 2.5f;
+              beatPerfect = false;
             } else if (BeatMeterController.instance.selectedBar == 2) {
               onBeatBonus = 5.0f;
+              beatPerfect = true;
             } else {
               onBeatBonus = 1.0f;
+              beatPerfect = false;
             }
         }
 
@@ -123,7 +131,7 @@ namespace TopDownCharacter2D.Attacks.Range
             UpdateProjectileSprite();
             _trail.Clear();
             _currentDuration = 0f;
-            _spriteRenderer.color = config.projectileColor;
+            _spriteRenderer.color = beatPerfect ? beatPerfectColor : config.projectileColor;
 
             _isReady = true;
         }
