@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3250774376250135996}
   - component: {fileID: 3250774376250135997}
   - component: {fileID: 3863701848068742613}
+  - component: {fileID: 2677687061650415008}
   m_Layer: 6
   m_Name: diabloPortal
   m_TagString: Portal
@@ -117,9 +118,21 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.027708534, y: 0.0011166071}
   m_Size: {x: 1.1301011, y: 0.45057875}
   m_Direction: 1
+--- !u!114 &2677687061650415008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3250774376250135938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41cadb7aae19dba8a9bb3e41c305b079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

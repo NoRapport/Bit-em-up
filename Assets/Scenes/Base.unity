@@ -810,8 +810,9 @@ Transform:
   - {fileID: 1954108984}
   - {fileID: 1747632063}
   - {fileID: 808793826}
+  - {fileID: 1702202612}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260973771
 GameObject:
@@ -1390,6 +1391,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectAnimator: {fileID: 1435437538}
+--- !u!1001 &380736939
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 226342503}
+    m_Modifications:
+    - target: {fileID: 2677687061650415008, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: tvSpawner
+      value: 
+      objectReference: {fileID: 607720502}
+    - target: {fileID: 2677687061650415008, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: globalLight
+      value: 
+      objectReference: {fileID: 88680568}
+    - target: {fileID: 3250774376250135938, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_Name
+      value: diabloPortal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
 --- !u!1001 &381677262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44938,66 +45004,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6251457984729655835, guid: 7489768188f01a7409e3f2bd2e6b4d56, type: 3}
   m_PrefabInstance: {fileID: 6251457983390072618}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1369246068
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1369246071}
-  - component: {fileID: 1369246070}
-  - component: {fileID: 1369246069}
-  m_Layer: 0
-  m_Name: VisualScripting SceneVariables
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1369246069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369246068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 765181c9ef4b24d32a4f7cbd2ef370dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1369246070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369246068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
---- !u!4 &1369246071
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369246068}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380226794
 GameObject:
   m_ObjectHideFlags: 0
@@ -48466,6 +48472,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665697807}
   m_CullTransparentMesh: 1
+--- !u!4 &1702202612 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+  m_PrefabInstance: {fileID: 380736939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1715795594
 GameObject:
   m_ObjectHideFlags: 0
@@ -54481,6 +54492,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 226342503}
     m_Modifications:
+    - target: {fileID: 2677687061650415008, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: tvSpawner
+      value: 
+      objectReference: {fileID: 607720502}
+    - target: {fileID: 2677687061650415008, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: globalLight
+      value: 
+      objectReference: {fileID: 88680568}
     - target: {fileID: 3250774376250135938, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
       propertyPath: m_Name
       value: diabloPortal
