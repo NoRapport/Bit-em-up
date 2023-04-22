@@ -5,14 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class opening : MonoBehaviour
 {
-    void Start()
+    public void LoadGame()
     {
-      StartCoroutine(WaitAndLoad(3));
-    }
-
-    private IEnumerator WaitAndLoad(float time)
-    {
-          yield return new WaitForSeconds(time * 1.0f);
-          SceneManager.LoadScene("Base");
+      SceneManager.LoadScene("Base");
     }
 }
