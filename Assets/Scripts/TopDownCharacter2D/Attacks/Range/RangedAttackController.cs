@@ -66,9 +66,9 @@ namespace TopDownCharacter2D.Attacks.Range
             if (BeatMeterController.instance.selectedBar == 0 || BeatMeterController.instance.selectedBar == 4) {
               onBeatBonus = 1.5f;
             } else if (BeatMeterController.instance.selectedBar == 1 || BeatMeterController.instance.selectedBar == 3) {
-              onBeatBonus = 2.0f;
+              onBeatBonus = 2.5f;
             } else if (BeatMeterController.instance.selectedBar == 2) {
-              onBeatBonus = 3.0f;
+              onBeatBonus = 5.0f;
             } else {
               onBeatBonus = 1.0f;
             }
