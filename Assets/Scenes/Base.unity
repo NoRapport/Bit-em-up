@@ -1409,6 +1409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: diabloPortalTest
       objectReference: {fileID: 0}
+    - target: {fileID: 3250774376250135938, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3250774376250135999, guid: 0c1ce6051a33fb814a8342d5835200df, type: 3}
       propertyPath: m_RootOrder
       value: 12
