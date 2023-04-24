@@ -8,6 +8,8 @@ public class DensityZoneManager : MonoBehaviour
     private GameObject[] zones;
     private Bounds[] zonesBounds;
     public int[] densities;
+    public int densityMax = 50;
+    public GameObject[] colorZones;
 
     private void Awake()
     {
@@ -32,7 +34,7 @@ public class DensityZoneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Target");
+        GameObject[] enemies = LevelManager.instance.targetList;
 
         for (int j = 0; j < zonesBounds.Length; j++)
         {
@@ -45,27 +47,31 @@ public class DensityZoneManager : MonoBehaviour
             }
             densities[j] = enemiesInZone;
         }
+
+        GetZoneWhereDensityIsMoreThan(densityMax);
+
     }
 
-    public GameObject GetZoneWhereDensityIsMoreThan(int triggerValue)
+    public void GetZoneWhereDensityIsMoreThan(int triggerValue)
     {
         for (int i = 0; i < densities.Length; i++)
         {
             if (densities[i] >= triggerValue)
             {
-                return zones[i];
+                colorZones[i].SetActive(true);
+            } else if (densities[i] < triggerValue) {
+                colorZones[i].SetActive(false);
             }
         }
-
-        return null;
     }
+
 
     public List<GameObject> GetEnemiesInZone(GameObject zone)
     {
         Bounds zoneBounds = zone.GetComponent<Collider2D>().bounds;
         List<GameObject> enemiesInZone = new List<GameObject>();
 
-        if (zoneBounds != null) 
+        if (zoneBounds != null)
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Target");
 
@@ -76,7 +82,7 @@ public class DensityZoneManager : MonoBehaviour
             }
 
         }
-        
+
         return enemiesInZone;
     }
 }
